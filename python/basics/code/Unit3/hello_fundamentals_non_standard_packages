@@ -1,0 +1,9 @@
+#!/usr/bin/env python
+
+from hello_world_web_service import ExampleRequestHandler
+from tornado.ioloop import IOLoop
+
+if __name__ == "__main__":
+    app = ExampleRequestHandler.make_app()
+    app.listen(10001)
+    IOLoop.current().start()

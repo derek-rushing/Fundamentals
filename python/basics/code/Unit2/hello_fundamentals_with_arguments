@@ -1,0 +1,18 @@
+#!/usr/bin/env python
+
+import argparse
+
+from example_module import hello_fundamentals_with_recipient
+
+
+def __parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("hello_recipient", help="The person you want to say"
+                                                " hello to.")
+
+    return parser.parse_args()
+
+
+if __name__ == "__main__":
+    args = __parse_args()
+    hello_fundamentals_with_recipient(args.hello_recipient)

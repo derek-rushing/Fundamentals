@@ -1,0 +1,51 @@
+#!/usr/bin/env python
+
+import argparse
+import logging
+
+from example_module import HelloFundamentals
+
+
+__DEFAULT_FORMATTER = logging.Formatter(
+    "%(funcName)s::%(levelname)s - %(asctime)s %(message)s"
+)
+
+
+def default_stream_logger(logger_name="hello_fundamentals_with_classes",
+                          verbose=False):
+    """
+    Create the default logger for output to console.
+    :param logger_name: The name of the logger instance
+    :param verbose: Whether to use verbose mode
+    :return: A logger object with the given logger_name
+    """
+    logger = logging.getLogger(logger_name)
+    logging_level = logging.DEBUG if verbose else logging.INFO
+    logger.setLevel(logging_level)
+
+    stream_handler = logging.StreamHandler()
+    stream_handler.setLevel(logging_level)
+    stream_handler.setFormatter(__DEFAULT_FORMATTER)
+
+    logger.addHandler(stream_handler)
+    return logger
+
+
+def __parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("hello_recipient", help="The person you want to say"
+                                                " hello to.")
+    parser.add_argument("-v", "--verbose", action="store_true",
+                        help="Optional argument to specify adding verbose"
+                             " output.")
+    return parser.parse_args()
+
+
+if __name__ == "__main__":
+    args = __parse_args()
+
+    # Notice we aren't passing in the first parameter because it's defaulted
+    # to something we want already. We can specify the second argument by
+    # using it's name and then assigning a value.
+    logger = default_stream_logger(verbose=args.verbose)
+    HelloFundamentals(args.hello_recipient, logger).hello_fundamentals()
