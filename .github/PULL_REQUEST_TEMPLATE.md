@@ -1,8 +1,9 @@
 ## What Are We Doing Here?
 
-Here is where you should describe the problem you are solving, adding any fine
-details on the solution that might otherwise not be recognizable for someone
-unfamiliar with the changes. Add some pictures if it helps.
+Here is where you should describe the problem you are solving, adding
+any fine details on the solution that might otherwise not be
+recognizable for someone unfamiliar with the changes. Add some pictures
+if it helps.
 
 ## How to Test and Verify
 
@@ -26,8 +27,8 @@ N/A (Hopefully)
 
 ### Risk Summary
 
-Add one or a few complete sentences about the possible risks or concerns for
-this change.
+Add one or a few complete sentences about the possible risks or concerns
+for this change.
 
 ## Code Review Checklist
 
