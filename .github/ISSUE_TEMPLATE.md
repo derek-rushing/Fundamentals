@@ -6,14 +6,13 @@ then lean towards assuming it is.
 
 # Issue Reproduction
 
-  * OS Specific?
-  * Module Specific?
-  * Environment information?
-  * Any other processes running that could have interefered?
+  * OS Specific: `Yes`|`No` 
+  * Module Specific: `Yes`|`No` 
+  * Environment Information: Summary of the environment. OS, environment variables, etc... 
+  * Other Notable Information: Any other information that is useful? None is acceptable here.
 
 # Creator Information
 
-  * Urgency?
-  * Are you willing to fix it, if we review?
-  * If you are willing to fix it, do you need any help from us besides
-    review and deploy?
+  * Urgency Level: `Low`, `Medium`, `High`, `Critical` 
+  * Willing to self fix: `Yes`|`No` 
+  * Need Help: `Yes`|`No`
